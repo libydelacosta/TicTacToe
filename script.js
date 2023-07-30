@@ -27,9 +27,6 @@ window.onload = () =>{//Once Window Loaded
         players.setAttribute("class","players active player"); //adding three class name in player element
     }
 }
-
-let playerXIcon = "fas fa-times" ;  //X Sign
-let playerOIcon = "far fa-circle" ;  //O Sign
 let playerSign ="X"; //Suppose player will be X
 let runBot = true;
 
@@ -39,13 +36,13 @@ let runBot = true;
 function clickedBox(element){
     // console.log(element);
     if(players.classList.contains("player")){
-        element.innerHTML = `<i class = "${playerOIcon}"></i>`; //adding circle sign when click
+        element.innerHTML = `<ion-icon name="ellipse-outline"></ion-icon>`; //adding circle sign when click
 		players.classList.add("active");  
 		//If player choose O then we will change the sign
     	playerSign ="O"; 
 		element.setAttribute("id" , playerSign);    	
     }else{
-        element.innerHTML = `<i class = "${playerXIcon}"></i>`; //adding cross sign when click
+        element.innerHTML = `<ion-icon name="close-outline"></ion-icon>`; //adding cross sign when click
 		players.classList.add("active");        
 		element.setAttribute("id" , playerSign);
     }
